@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0027D326CD6DAC0086544E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D226CD6DAC0086544E /* View.swift */; };
+		3F0027D526CD6DC30086544E /* ClearBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */; };
+		3F0027D726CD6E660086544E /* PiramidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D626CD6E660086544E /* PiramidView.swift */; };
+		3F0027DA26CD75960086544E /* PiramidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D926CD75960086544E /* PiramidViewModel.swift */; };
 		3F8FE3A325C84FFB001821FF /* StonesTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A225C84FFB001821FF /* StonesTestApp.swift */; };
 		3F8FE3A525C84FFB001821FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A425C84FFB001821FF /* ContentView.swift */; };
 		3F8FE3A725C84FFD001821FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A625C84FFD001821FF /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0027D226CD6DAC0086544E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundView.swift; sourceTree = "<group>"; };
+		3F0027D626CD6E660086544E /* PiramidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiramidView.swift; sourceTree = "<group>"; };
+		3F0027D926CD75960086544E /* PiramidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiramidViewModel.swift; sourceTree = "<group>"; };
 		3F8FE39F25C84FFB001821FF /* StonesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StonesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8FE3A225C84FFB001821FF /* StonesTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesTestApp.swift; sourceTree = "<group>"; };
 		3F8FE3A425C84FFB001821FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0027D826CD757A0086544E /* PiramidView */ = {
+			isa = PBXGroup;
+			children = (
+				3F0027D626CD6E660086544E /* PiramidView.swift */,
+				3F0027D926CD75960086544E /* PiramidViewModel.swift */,
+			);
+			path = PiramidView;
+			sourceTree = "<group>";
+		};
 		3F8FE39625C84FFA001821FF = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +85,8 @@
 				3F8FE3A625C84FFD001821FF /* Assets.xcassets */,
 				3F8FE3AB25C84FFD001821FF /* Info.plist */,
 				3F8FE3A825C84FFD001821FF /* Preview Content */,
+				3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */,
+				3F0027D826CD757A0086544E /* PiramidView */,
 			);
 			path = StonesTest;
 			sourceTree = "<group>";
@@ -93,6 +112,7 @@
 			children = (
 				3FEFFE2225C8A54900543395 /* Color.swift */,
 				3FEFFE2625C8A56B00543395 /* AnyTransition.swift */,
+				3F0027D226CD6DAC0086544E /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,10 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEFFE2B25C8A5E600543395 /* CustomRectangle.swift in Sources */,
+				3F0027DA26CD75960086544E /* PiramidViewModel.swift in Sources */,
+				3F0027D726CD6E660086544E /* PiramidView.swift in Sources */,
 				3F8FE3A525C84FFB001821FF /* ContentView.swift in Sources */,
 				3FEFFE2725C8A56B00543395 /* AnyTransition.swift in Sources */,
 				3F8FE3A325C84FFB001821FF /* StonesTestApp.swift in Sources */,
 				3F96129825C9CAEB00AD8025 /* StoneViewModel.swift in Sources */,
+				3F0027D326CD6DAC0086544E /* View.swift in Sources */,
+				3F0027D526CD6DC30086544E /* ClearBackgroundView.swift in Sources */,
 				3FEFFE2325C8A54900543395 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
