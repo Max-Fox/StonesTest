@@ -19,11 +19,7 @@ struct PiramidView: View {
     var piramid: some View {
         ForEach(Array(viewModel.stones.enumerated()), id: \.offset) { index, stone in
             if viewModel.stones.last == stone, viewModel.didAppendStones {
-                Rectangle()
-                    .border(Color.black, width: 1)
-                    .frame(width: 150, height: heightRectangle)
-                    .offset(y: -heightRectangle * CGFloat(index))
-                    .foregroundColor(stone.color)
+                StoneView(stone: stone, index: index, offset: viewModel.getOffset(by: stone))
                     .transition(.moveAndFade)
                     .animation(.easeInOut(duration: 1))
                     .onAppear {
@@ -34,11 +30,7 @@ struct PiramidView: View {
                         }
                     }
             } else {
-                Rectangle()
-                    .border(Color.black, width: 1)
-                    .frame(width: 150, height: heightRectangle)
-                    .offset(y: -heightRectangle * CGFloat(index))
-                    .foregroundColor(stone.color)
+                StoneView(stone: stone, index: index, offset: viewModel.getOffset(by: stone))
             }
         }
     }
@@ -53,16 +45,16 @@ struct PiramidView: View {
                     .frame(width: origin.size.width / 1.1, height: origin.size.width / 1.1)
                     .cornerRadius(16)
                     .foregroundColor(.white)
-                VStack(spacing: 15) {
+                VStack(spacing: 20) {
                     Text("Keep it up!").font(.title).bold().opacity(opacityText)
                     ZStack {
                         piramid
-                            .frame(width: 250, height: 150, alignment: .bottom)
+                            .frame(width: 250, height: origin.size.height / 4.5, alignment: .bottom)
                     }
-                    Button("continue") {
+                    Button("continue →") {
                         presentationMode.wrappedValue.dismiss()
                         needShowFade.toggle()
-                    }
+                    }.font(.system(size: 17, weight: .black, design: .default))
                     .frame(width: 140, height: 36, alignment: .center)
                     .background(Color(red: 1, green: 238 / 255, blue: 0))
                     .foregroundColor(.black)
@@ -70,14 +62,14 @@ struct PiramidView: View {
                     .padding()
                     .frame(maxWidth: origin.size.width / 1.1, alignment: .trailing)
                     .opacity(opacityText)
-                }
+                }.frame(height: origin.size.width / 1.1)
             }.frame(width: origin.size.width, height: origin.size.height, alignment: .center)
             
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 viewModel.didAppendStones = true
-                viewModel.stones.append(CustomRectangle(coordinate: .zero))
+                viewModel.stones.append(PiramidStone(type: .big))
                 
             }
         }

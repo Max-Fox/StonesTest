@@ -11,6 +11,8 @@
 		3F0027D526CD6DC30086544E /* ClearBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */; };
 		3F0027D726CD6E660086544E /* PiramidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D626CD6E660086544E /* PiramidView.swift */; };
 		3F0027DA26CD75960086544E /* PiramidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027D926CD75960086544E /* PiramidViewModel.swift */; };
+		3F0027DC26CDA93C0086544E /* StoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027DB26CDA93C0086544E /* StoneView.swift */; };
+		3F0027DE26CEE7AC0086544E /* StoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0027DD26CEE7AC0086544E /* StoneType.swift */; };
 		3F8FE3A325C84FFB001821FF /* StonesTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A225C84FFB001821FF /* StonesTestApp.swift */; };
 		3F8FE3A525C84FFB001821FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A425C84FFB001821FF /* ContentView.swift */; };
 		3F8FE3A725C84FFD001821FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FE3A625C84FFD001821FF /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundView.swift; sourceTree = "<group>"; };
 		3F0027D626CD6E660086544E /* PiramidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiramidView.swift; sourceTree = "<group>"; };
 		3F0027D926CD75960086544E /* PiramidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiramidViewModel.swift; sourceTree = "<group>"; };
+		3F0027DB26CDA93C0086544E /* StoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneView.swift; sourceTree = "<group>"; };
+		3F0027DD26CEE7AC0086544E /* StoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneType.swift; sourceTree = "<group>"; };
 		3F8FE39F25C84FFB001821FF /* StonesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StonesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8FE3A225C84FFB001821FF /* StonesTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesTestApp.swift; sourceTree = "<group>"; };
 		3F8FE3A425C84FFB001821FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,13 +53,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F0027D826CD757A0086544E /* PiramidView */ = {
+		3F0027DF26CEE7D60086544E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F0027DB26CDA93C0086544E /* StoneView.swift */,
 				3F0027D626CD6E660086544E /* PiramidView.swift */,
-				3F0027D926CD75960086544E /* PiramidViewModel.swift */,
 			);
-			path = PiramidView;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3F8FE39625C84FFA001821FF = {
@@ -77,6 +81,7 @@
 		3F8FE3A125C84FFB001821FF /* StonesTest */ = {
 			isa = PBXGroup;
 			children = (
+				3F0027DF26CEE7D60086544E /* Views */,
 				3F96129625C9CADA00AD8025 /* ViewModels */,
 				3FEFFE2925C8A5D900543395 /* Models */,
 				3FEFFE2125C8A53900543395 /* Extensions */,
@@ -85,8 +90,6 @@
 				3F8FE3A625C84FFD001821FF /* Assets.xcassets */,
 				3F8FE3AB25C84FFD001821FF /* Info.plist */,
 				3F8FE3A825C84FFD001821FF /* Preview Content */,
-				3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */,
-				3F0027D826CD757A0086544E /* PiramidView */,
 			);
 			path = StonesTest;
 			sourceTree = "<group>";
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				3F96129725C9CAEB00AD8025 /* StoneViewModel.swift */,
+				3F0027D926CD75960086544E /* PiramidViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -121,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				3FEFFE2A25C8A5E600543395 /* CustomRectangle.swift */,
+				3F0027D426CD6DC30086544E /* ClearBackgroundView.swift */,
+				3F0027DD26CEE7AC0086544E /* StoneType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEFFE2B25C8A5E600543395 /* CustomRectangle.swift in Sources */,
+				3F0027DE26CEE7AC0086544E /* StoneType.swift in Sources */,
 				3F0027DA26CD75960086544E /* PiramidViewModel.swift in Sources */,
 				3F0027D726CD6E660086544E /* PiramidView.swift in Sources */,
 				3F8FE3A525C84FFB001821FF /* ContentView.swift in Sources */,
@@ -202,6 +209,7 @@
 				3F8FE3A325C84FFB001821FF /* StonesTestApp.swift in Sources */,
 				3F96129825C9CAEB00AD8025 /* StoneViewModel.swift in Sources */,
 				3F0027D326CD6DAC0086544E /* View.swift in Sources */,
+				3F0027DC26CDA93C0086544E /* StoneView.swift in Sources */,
 				3F0027D526CD6DC30086544E /* ClearBackgroundView.swift in Sources */,
 				3FEFFE2325C8A54900543395 /* Color.swift in Sources */,
 			);
