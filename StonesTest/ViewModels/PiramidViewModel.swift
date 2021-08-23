@@ -16,9 +16,9 @@ struct PiramidStone: Identifiable, Equatable {
 }
 
 class PiramidViewModel: ObservableObject {
-    @Published var stones: [PiramidStone] = [PiramidStone(type: .big),
-                                             PiramidStone(type: .small),
-                                             PiramidStone(type: .small)
+    @Published var stones: [PiramidStone] = [PiramidStone(type: .small),
+                                             PiramidStone(type: .average),
+                                             PiramidStone(type: .medium)
     ]
     var didAppendStones: Bool = false
     
@@ -30,7 +30,7 @@ class PiramidViewModel: ObservableObject {
         
         var offset: CGFloat = 0
         for item in 0 ..< index {
-            offset += stones[item].type.size
+            offset += stones[item].type.height - stones[item].type.offset
         }
         
         return offset
@@ -40,7 +40,7 @@ class PiramidViewModel: ObservableObject {
         var height: CGFloat = 0
         
         for stone in stones {
-            height += stone.type.size
+            height += stone.type.height
         }
         
         return height

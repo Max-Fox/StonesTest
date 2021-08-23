@@ -13,11 +13,10 @@ struct StoneView: View {
     let offset: CGFloat
     
     var body: some View {
-        Rectangle()
-            .border(Color.black, width: 1)
-            .frame(width: 150, height: stone.type.size)
-            .offset(y: -offset)
-            .foregroundColor(stone.color)
+        Image(stone.type.imageName)
+            .resizable()
+            .frame(width: stone.type.width, height: stone.type.height)
+            .offset(x: stone.type == .small ? -7 : 0, y: -offset)
     }
 }
 
